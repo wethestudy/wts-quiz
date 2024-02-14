@@ -3,3 +3,6 @@
     flex-direction: row;
     gap: 0.5rem;
 }
+.link{
+    text-decoration: underline;
+}

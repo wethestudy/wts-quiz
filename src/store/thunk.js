@@ -10,7 +10,6 @@ import { mapQuizTypesFromCode, chooseRandomItemsById, removeAnswersFromObject, r
 import treePost from "../database/treePost";
 import { setQuestionsAnswers, setTreePost } from "./databaseSlice";
 
-const getTreeID = (state) => state.tree.treeID;
 const getResultsData = (state) => state.data.resultsData;
 const getPassingRate = (state) => state.quiz.passingRate;
 const getPercentageCorrect = (state) => state.data.percentageCorrect;
@@ -114,8 +113,7 @@ export const evaluateResults = (updatedResultsData) => async (dispatch, getState
   await dispatch(computeCorrectAnswers(updatedResultsData))
   let percentageCorrect = getPercentageCorrect(getState());
   if(percentageCorrect >= passingRate){
-    let treeID = getTreeID(getState());
-    window.parent.postMessage(treeID, `${url}`);
+    window.parent.postMessage("master", `${url}`);
   }
 }
 

@@ -14,7 +14,7 @@ import Guideline from '../sub/guideline';
 import { Resources } from '../sub/resources';
 import {ReactComponent as AIGenerated} from '../../assets/icons/fi-sr-brain-circuit.svg'
 import {ReactComponent as Time} from '../../assets/icons/fi-sr-time-quarter-to.svg'
-import {ReactComponent as Quit} from '../../assets/icons/029-disable.svg'
+import {ReactComponent as Quit} from '../../assets/icons/fi-sr-circle-x.svg'
 import {ReactComponent as Repeat} from '../../assets/icons/fi-sr-arrows-repeat.svg'
 import introScreenStyles from './styles/introscreen.module.css'
 import quizScreenStyles from './styles/quizscreen.module.css'
@@ -76,7 +76,7 @@ function IntroScreen() {
     }
 
     const onCloseUpdate = () => {
-      window.parent.postMessage(treeID, `${url}`);
+      window.parent.postMessage("master", `${url}`);
       dispatch(sendCloseModalMessage())
     }
 

@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import IntroScreen from './components/screen/IntroScreen';

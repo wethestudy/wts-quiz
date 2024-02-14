@@ -1,0 +1,40 @@
+var _defs, _circle, _circle2, _circle3, _circle4, _path, _circle5, _path2;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+const SvgTreeOfKnowledge = props => /*#__PURE__*/React.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 266.541 277.5"
+}, props), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("style", null, ".tree-of-knowledge_svg__a{fill:#b59d69}.tree-of-knowledge_svg__b{fill:none;stroke:#b59d69;stroke-miterlimit:10;stroke-width:5px}"))), _circle || (_circle = /*#__PURE__*/React.createElement("circle", {
+  cx: 133.27,
+  cy: 150,
+  r: 37.5,
+  className: "tree-of-knowledge_svg__a"
+})), _circle2 || (_circle2 = /*#__PURE__*/React.createElement("circle", {
+  cx: 133.27,
+  cy: 25,
+  r: 25,
+  className: "tree-of-knowledge_svg__a"
+})), _circle3 || (_circle3 = /*#__PURE__*/React.createElement("circle", {
+  cx: 25,
+  cy: 212.51,
+  r: 25,
+  className: "tree-of-knowledge_svg__a"
+})), _circle4 || (_circle4 = /*#__PURE__*/React.createElement("circle", {
+  cx: 133.27,
+  cy: 150,
+  r: 125,
+  className: "tree-of-knowledge_svg__b"
+})), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  d: "M133.27 25v125M133.27 150 25 212.51",
+  className: "tree-of-knowledge_svg__b"
+})), _circle5 || (_circle5 = /*#__PURE__*/React.createElement("circle", {
+  cx: 241.541,
+  cy: 212.51,
+  r: 25,
+  className: "tree-of-knowledge_svg__a"
+})), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+  d: "m133.27 150 108.271 62.51",
+  className: "tree-of-knowledge_svg__b"
+})));
+export { SvgTreeOfKnowledge as ReactComponent };
+export default __webpack_public_path__ + "7c1c2465267696a9af07d7340d424578.svg";

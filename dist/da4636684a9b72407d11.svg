@@ -1,0 +1,15 @@
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+const SvgFiSrAngleCircleLeft = props => /*#__PURE__*/React.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 512,
+  height: 512,
+  fill: "current",
+  stroke: "current",
+  viewBox: "0 0 24 24"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  d: "M24 12a12 12 0 1 0-12 12 12.013 12.013 0 0 0 12-12ZM8 12a3 3 0 0 1 .752-1.987c.291-.327.574-.637.777-.84L12.353 6.3a1 1 0 0 1 1.426 1.4l-2.829 2.88c-.187.188-.441.468-.7.759a1 1 0 0 0 0 1.323c.258.29.512.57.693.752l2.836 2.886a1 1 0 0 1-1.426 1.4l-2.829-2.878c-.2-.2-.48-.507-.769-.833A3 3 0 0 1 8 12Z"
+})));
+export { SvgFiSrAngleCircleLeft as ReactComponent };
+export default __webpack_public_path__ + "4c14eb939d84a83c922624b6ec8fe83c.svg";

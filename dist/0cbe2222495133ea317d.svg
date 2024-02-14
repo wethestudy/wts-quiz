@@ -1,0 +1,14 @@
+var _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+import * as React from "react";
+const SvgFiSrTimeQuarterTo = props => /*#__PURE__*/React.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  width: 512,
+  height: 512,
+  "data-name": "Layer 1",
+  viewBox: "0 0 24 24"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  d: "M14.181.207A1 1 0 0 0 13 1.19v2.879A7.954 7.954 0 0 0 4.069 13H1.19a1 1 0 0 0-.983 1.181A12 12 0 1 0 14.181.207M12 14a2 2 0 0 1-1.723-1H8a1 1 0 0 1 0-2h2.277a2 2 0 0 1 .723-.723V7a1 1 0 0 1 2 0v3.277A1.994 1.994 0 0 1 12 14M9.972.1a1 1 0 1 1-1 1 1 1 0 0 1 1-1m-4.1 1.756a1 1 0 1 1-1 1 1 1 0 0 1 .997-1.002zM2.779 4.841a1 1 0 1 1-1 1 1 1 0 0 1 1-1m-1.6 4.167a1 1 0 1 1-1 1 1 1 0 0 1 .998-1z"
+})));
+export { SvgFiSrTimeQuarterTo as ReactComponent };
+export default __webpack_public_path__ + "caf5c1df7b20f2307f7e18da3cecd856.svg";

@@ -36,8 +36,12 @@ module.exports = {
        exclude: /\.module\.css$/,
      },
      {
-       test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+       test: /\.(pdf|jpg|png|gif|ico)$/,
        type: 'asset/resource',
+     },
+     {
+       test: /\.svg$/,
+       use: ['@svgr/webpack', 'file-loader'],
      },
      {  
        test: /\.(woff|woff2|eot|ttf|otf)$/,

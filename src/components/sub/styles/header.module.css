@@ -1,0 +1,15 @@
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.logo-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.meta-text{
+    font-size: x-small;
+}

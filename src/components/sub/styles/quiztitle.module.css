@@ -1,0 +1,14 @@
+.quiz-title-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #e7e5e4;
+    border-radius: 20px;
+}
+.text{
+    font-size: small;
+}
+.quiz-title{
+    font-size: large;
+    font-weight: bold;
+}

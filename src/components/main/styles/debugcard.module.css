@@ -1,0 +1,14 @@
+.debug-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem;
+    margin: 2rem;
+    width: 60vw;
+    height: 100%;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

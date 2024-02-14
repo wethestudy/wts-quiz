@@ -1,0 +1,12 @@
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.button-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 0.25rem;
+}

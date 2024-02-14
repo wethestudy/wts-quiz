@@ -1,0 +1,66 @@
+.body-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.guideline-card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.automatic-body-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10rem;
+    height: 100%;
+}
+.automatic-body-end-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tutorial-header{
+    position: absolute;
+    background-color: #00000090;
+    top: 15%;
+    left: 50%;
+    padding: 1rem;
+    width: 25%;
+    color: white;
+    font-size: small;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+.tutorial-body{
+    position: absolute;
+    background-color: #00000090;
+    top: 50%;
+    left: 55%;
+    padding: 1rem;
+    width: 25%;
+    color: white;
+    font-size: small;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+.tutorial-footer{
+    align-items: center;
+    position: absolute;
+    background-color: #00000090;
+    bottom: 20%;
+    left: 8.5%;
+    padding: 1rem;
+    width: 25%;
+    color: white;
+    font-size: small;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+@media only screen and (max-width: 840px) {
+    .guideline-card-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,86 @@
+.button{
+    height: 2rem;
+    padding: 0 1rem;
+    min-width: 10rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-align: center;
+    border: 2px solid #b59d69;
+    border-radius: 20px;
+    transition: 0.1s;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.disabled{
+    color: white;
+    border: 2px solid darkgray;
+    background-color: darkgray;
+    cursor: default;
+}
+.disabled:hover{
+    color: white;
+    border: 2px solid darkgray;
+    background-color: darkgray;
+    cursor: default;
+}
+.primary{
+    background-color: #b59d69;
+}
+.primary:hover{
+    border: 2px solid #57534e;
+    background-color: #57534e;
+}
+.primary:disabled:hover{
+    border: 2px solid #b59d69;
+    background-color: #b59d69;
+    cursor: default;
+}
+.secondary, .secondary:disabled{
+    color: #b59d69;
+    background-color: transparent;
+}
+.secondary:hover{
+    color: white;
+    border: 2px solid #b59d69;
+    background-color: #b59d69;
+}
+.secondary:disabled:hover{
+    color: #b59d69;
+    border: 2px solid #b59d69;
+    background-color: white;
+    cursor: default;
+}
+.correct:disabled{
+    border: 2px solid #47be4d;
+    background-color: #47be4d;
+}
+.correct:hover{
+    border: 2px solid #14dc14;
+    background-color: #14dc14;
+}
+.correct:disabled:hover{
+    border: 2px solid #47be4d;
+    background-color: #47be4d;
+    cursor: default;
+}
+.wrong:disabled{
+    border: 2px solid #dc143c;
+    background-color: #dc143c;
+}
+.wrong:hover{
+    border: 2px solid #ff0000;
+    background-color: #ff0000;
+}
+.wrong:disabled:hover{
+    border: 2px solid #dc143c;
+    background-color: #dc143c;
+    cursor: default;
+}
+
+@media only screen and (max-width: 840px) {
+    .button{
+        min-width: 5rem;
+    }
+}

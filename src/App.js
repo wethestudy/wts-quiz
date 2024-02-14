@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import IntroScreen from './components/screen/IntroScreen';
+import QuizScreen from './components/screen/QuizScreen';
+import ResultsScreen from './components/screen/ResultsScreen';
+import LoadingScreen from './components/screen/LoadingScreen';
+import ErrorScreen from './components/screen/ErrorScreen';
+import { fetchDebugData, fetchInitData, fetchIntroData } from './store/thunk';
+import DebuggingScreen from './components/screen/DebuggingScreen';
+import { useDebugging } from './devSettings';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dispatch = useDispatch();
+  const currentScreen = useSelector((state) => state.ui.currentScreen);
+
+  const handleEventFromWebflow = async (event) => {
+    if (event.detail) {
+      let webflowDispatch = await event.detail;
+      useDebugging ? dispatch(fetchDebugData()) : dispatch(fetchIntroData(webflowDispatch));
+    }
+  };
+  
+  useEffect(()=>{
+    dispatch(fetchInitData())
+    document.addEventListener('input', handleEventFromWebflow);
+    return () => {
+      document.removeEventListener('input', handleEventFromWebflow);
+    };
+  },[dispatch])
+  
+  return <div className='App'>
+    {currentScreen === 'loading' && <LoadingScreen />}
+    {currentScreen === 'intro' && <IntroScreen />}
+    {currentScreen === 'quiz' && <QuizScreen />}
+    {currentScreen === 'results' && <ResultsScreen />}
+    {currentScreen === 'error' && <ErrorScreen />}
+    {currentScreen === 'debugging' && <DebuggingScreen />}
+  </div>;
 }
 
 export default App;

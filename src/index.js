@@ -7,7 +7,7 @@ import './assets/fonts/Heebo/Heebo-VariableFont_wght.ttf';
 import App from './App';
 import { MathJaxContext } from 'better-react-mathjax';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root-quiz'));
 root.render(
     <MathJaxContext>
         <Provider store={store}>

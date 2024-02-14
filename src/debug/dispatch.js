@@ -17,6 +17,7 @@ setTimeout(()=>{
 }, 20000)
 
 // Code to dispatch to Quiz
+// Include AirtableID in treeID and dispatchEvent
 const memDispatchQuiz = window.$memberstackDom;
 const intervalWebflow100 = setInterval(()=>{
     document.addEventListener('input', function(event) {clearInterval(intervalWebflow100)});
@@ -30,10 +31,10 @@ const intervalWebflow100 = setInterval(()=>{
                     memberJSON = await memDispatchQuiz.getMemberJSON();
                     dispatchEvent = {member: memberJSON, treeID: ""}   
                 }
-                document.dispatchEvent(new CustomEvent('memberData', { detail: dispatchEvent}));
+                document.dispatchEvent(new CustomEvent('input', { detail: dispatchEvent}));
             })
     } catch {
-        document.dispatchEvent(new CustomEvent('memberData', { detail: dispatchEvent}));
+        document.dispatchEvent(new CustomEvent('input', { detail: dispatchEvent}));
     }
 }, 5000)
 setTimeout(()=>{
@@ -41,6 +42,7 @@ setTimeout(()=>{
 }, 20000)
 
 // Code when receiving from Quiz. Two functions: (1) close modal, (2) update memberJSON
+// Include Airtable ID in .includes and .push
 const memReceiveQuiz = window.$memberstackDom;
 window.addEventListener('message', (event) => {
     const modal = document.getElementById('quiz-modal');
@@ -56,10 +58,10 @@ window.addEventListener('message', (event) => {
                         if(memberJSON.data.masteredArticlesID.includes("")){
                             return
                         } else {
-                            const updatedArray = memberJSON.data.masteredArticlesID.push("");
+                            memberJSON.data.masteredArticlesID.push("");
                             const updatedMemberData = {
                                 ...memberJSON.data,
-                                masteredArticlesID: updatedArray
+                                masteredArticlesID: memberJSON.data.masteredArticlesID
                             };
                             await memReceiveQuiz.updateMemberJSON({
                                 json: updatedMemberData

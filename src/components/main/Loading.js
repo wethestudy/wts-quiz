@@ -7,7 +7,7 @@ const Loading = () => {
     return <div className={loadingStyles['loading-wrapper']}>
         <div className={loadingStyles['lottie-wrapper']}>
             <Lottie animationData={animationData} speed={1.5} loop={true} autoplay={true} />
-            <div className={loadingStyles['loading-message']}><p>Now Loading...</p></div>
+            <div className={loadingStyles['loading-message']}><div className={loadingStyles['text']}>Now Loading...</div></div>
         </div>
     </div>
 }

@@ -18,6 +18,8 @@ function App() {
 
   const handleEventFromWebflow = async (event) => {
     if (event.origin !== url) {
+      console.log(event.origin)
+      console.log(event.url)
       console.log("Error URL dispatch")
       return
     }

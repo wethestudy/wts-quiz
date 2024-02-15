@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateItem, removeItem, updateNumAnswers } from "../../store/dataSlice";
-import { onGoToNextQuestion, onGoToPreviousQuestion } from "../../store/thunk.js";
+import { onGoToNextQuestion, onGoToPreviousQuestion, triggerMathJaxRender } from "../../store/thunk.js";
 import Button from "./Button";
 import sliderStyles from './styles/slider.module.css'
 import {ReactComponent as LeftButton} from '../../assets/icons/fi-sr-angle-circle-left.svg'
@@ -11,6 +11,10 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
     const dispatch = useDispatch();
     const slideIndex = useSelector(state => state.ui.slideIndex);
     const questions = useSelector(state => state.data.quizData);
+
+    useEffect(()=>{
+        triggerMathJaxRender()
+    }, [])
 
     const goToPreviousQuestion = () => {
         dispatch(onGoToPreviousQuestion(questions))

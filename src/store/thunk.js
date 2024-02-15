@@ -39,16 +39,16 @@ export const triggerMathJaxRender = debounce(() => {
   if (window.MathJax) {
     window.MathJax.typeset();
   }
-}, 300);
+}, 0);
 
 export const onGoToPreviousQuestion = (questions) => async (dispatch) => {
   await dispatch(goToPreviousQuestion(questions));
-  dispatch(triggerMathJaxRender());
+  triggerMathJaxRender();
 };
 
 export const onGoToNextQuestion = (questions) => async (dispatch) => {
   await dispatch(goToNextQuestion(questions));
-  dispatch(triggerMathJaxRender());
+  triggerMathJaxRender();
 };
 
 export const initTreeObject = (treeID) => (dispatch, getState) => {

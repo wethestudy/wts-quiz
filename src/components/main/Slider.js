@@ -38,7 +38,6 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
                     choices={questionArray[slideIndex].fields["Choices"]}
                     resultsObject={resultsArray[slideIndex]}/>
             </div>
-            <MathJaxRenderer/>
         </div>
         <RightButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={onGoToNextQuestion}/>
     </div>
@@ -51,7 +50,7 @@ const Question = ({question = null, questionID = null, index = null, numQuestion
             <div className={sliderStyles['question-count-text']}>Question {index} of {numQuestion}</div>
             <div className={sliderStyles['question-text']}>{question}</div>
         </div>
-        
+        <MathJaxRenderer/>
     </div>
 }
 
@@ -101,6 +100,7 @@ const Answers = ({questionID = null, choices = null, resultsObject = null}) => {
                     style={{textAlign: "left"}}
                 />
         })}
+        <MathJaxRenderer/>
     </>
 }
 

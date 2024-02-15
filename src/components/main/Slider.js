@@ -6,6 +6,7 @@ import Button from "./Button";
 import sliderStyles from './styles/slider.module.css'
 import {ReactComponent as LeftButton} from '../../assets/icons/fi-sr-angle-circle-left.svg'
 import {ReactComponent as RightButton} from '../../assets/icons/fi-sr-angle-circle-right.svg'
+import MathJaxRenderer from "../sub/mathjaxRenderer";
 
 const Slider = ({questionArray=[], resultsArray=[]}) => {
     const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
                     choices={questionArray[slideIndex].fields["Choices"]}
                     resultsObject={resultsArray[slideIndex]}/>
             </div>
+            <MathJaxRenderer/>
         </div>
         <RightButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={onGoToNextQuestion}/>
     </div>

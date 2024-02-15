@@ -10,19 +10,12 @@ import ErrorScreen from './components/screen/ErrorScreen';
 import { fetchDebugData, fetchInitData, fetchIntroData } from './store/thunk';
 import DebuggingScreen from './components/screen/DebuggingScreen';
 import { useDebugging } from './devSettings';
-import { url } from './links';
 
 function App() {
   const dispatch = useDispatch();
   const currentScreen = useSelector((state) => state.ui.currentScreen);
 
   const handleEventFromWebflow = async (event) => {
-    if (event.origin !== url) {
-      console.log(event.origin)
-      console.log(event.url)
-      console.log("Error URL dispatch")
-      return
-    }
     if (event.detail) {
       let webflowDispatch = await event.detail;
       useDebugging ? dispatch(fetchDebugData()) : dispatch(fetchIntroData(webflowDispatch));

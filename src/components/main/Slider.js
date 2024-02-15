@@ -13,10 +13,6 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
     const slideIndex = useSelector(state => state.ui.slideIndex);
     const questions = useSelector(state => state.data.quizData);
 
-    useEffect(()=>{
-        dispatch(triggerMathJaxRender())
-    }, [dispatch])
-
     const onGoToPreviousQuestion = () => {
         dispatch(goToPreviousQuestion(questions));
         setTimeout(() => {

@@ -6,7 +6,6 @@ import Button from "./Button";
 import sliderStyles from './styles/slider.module.css'
 import {ReactComponent as LeftButton} from '../../assets/icons/fi-sr-angle-circle-left.svg'
 import {ReactComponent as RightButton} from '../../assets/icons/fi-sr-angle-circle-right.svg'
-import { MathJax } from "better-react-mathjax";
 
 const Slider = ({questionArray=[], resultsArray=[]}) => {
     const dispatch = useDispatch();
@@ -48,7 +47,7 @@ const Question = ({question = null, questionID = null, index = null, numQuestion
         <div className={sliderStyles['question-id-text']} style={style}>{`ID: ${questionID}`}</div>
         <div>
             <div className={sliderStyles['question-count-text']}>Question {index} of {numQuestion}</div>
-            <div className={sliderStyles['question-text']}><MathJax>{question}</MathJax></div>
+            <div className={sliderStyles['question-text']}>{question}</div>
         </div>
         
     </div>

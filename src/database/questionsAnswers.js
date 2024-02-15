@@ -6413,7 +6413,7 @@ const questionAnswer = [
       "createdTime": "2024-01-29T09:59:33.000Z",
       "fields": {
         "Question ID": "186ee216-cfbc-4c90-a19a-0cced540b546",
-        "Question": "What is eccentricity \\(e\\)?",
+        "Question": "What is eccentricity \(e\)?",
         "Airtable ID": "recn9dZIBIKhdNycB",
         "Type": "multipleChoice",
         "Choices": "[\"The length between the conic's vertices\",\"The ratio of linear eccentricity \\\\(c\\\\) and semi-major distance \\\\(a\\\\)\",\"The length between the center of the conic and its focus\",\"The half distance between the center of the conic and its focus\"]",

@@ -25,6 +25,12 @@ export const fetchInitData = () => async (dispatch) => {
   dispatch(setQuestionsAnswers(processedQA))
 }
 
+export const triggerMathJaxRender = () => (dispatch) => {
+  if (window.MathJax) {
+    window.MathJax.typeset();
+  }
+};
+
 export const initTreeObject = (treeID) => (dispatch, getState) => {
   const treeData = getTreePost(getState()).find(object => object.fields["Airtable ID"] === treeID)
   dispatch(setTreeDetails({

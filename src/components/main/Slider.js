@@ -2,11 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateItem, removeItem, updateNumAnswers } from "../../store/dataSlice";
 import { goToPreviousQuestion, goToNextQuestion } from "../../store/uiSlice";
+import { triggerMathJaxRender } from "../../store/thunk";
 import Button from "./Button";
 import sliderStyles from './styles/slider.module.css'
 import {ReactComponent as LeftButton} from '../../assets/icons/fi-sr-angle-circle-left.svg'
 import {ReactComponent as RightButton} from '../../assets/icons/fi-sr-angle-circle-right.svg'
-import MathJaxRenderer from "../sub/mathjaxRenderer";
 
 const Slider = ({questionArray=[], resultsArray=[]}) => {
     const dispatch = useDispatch();
@@ -15,9 +15,11 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
 
     const onGoToPreviousQuestion = () => {
         dispatch(goToPreviousQuestion(questions));
+        dispatch(triggerMathJaxRender())
     };
     const onGoToNextQuestion = () => {
         dispatch(goToNextQuestion(questions));
+        dispatch(triggerMathJaxRender())
     };
 
     return <div className={sliderStyles['slider-wrapper']}>
@@ -50,7 +52,6 @@ const Question = ({question = null, questionID = null, index = null, numQuestion
             <div className={sliderStyles['question-count-text']}>Question {index} of {numQuestion}</div>
             <div className={sliderStyles['question-text']}>{question}</div>
         </div>
-        <MathJaxRenderer/>
     </div>
 }
 
@@ -100,7 +101,6 @@ const Answers = ({questionID = null, choices = null, resultsObject = null}) => {
                     style={{textAlign: "left"}}
                 />
         })}
-        <MathJaxRenderer/>
     </>
 }
 

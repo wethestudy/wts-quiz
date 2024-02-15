@@ -1,5 +1,5 @@
 import { url } from "../links";
-import { setCurrentScreen } from "./uiSlice";
+import { setCurrentScreen, goToNextQuestion, goToPreviousQuestion } from "./uiSlice";
 import { setQuizData, setResultsData, computeCorrectAnswers, resetCorrectAnswers, setTotalEstTime } from "./dataSlice";
 import { setMemberDetails } from "./memberSlice";
 import { resetSlideIndex, setLoading } from "./uiSlice";
@@ -41,6 +41,15 @@ export const triggerMathJaxRender = debounce(() => {
   }
 }, 300);
 
+export const onGoToPreviousQuestion = (questions) => async (dispatch) => {
+  await dispatch(goToPreviousQuestion(questions));
+  dispatch(triggerMathJaxRender());
+};
+
+export const onGoToNextQuestion = (questions) => async (dispatch) => {
+  await dispatch(goToNextQuestion(questions));
+  dispatch(triggerMathJaxRender());
+};
 
 export const initTreeObject = (treeID) => (dispatch, getState) => {
   const treeData = getTreePost(getState()).find(object => object.fields["Airtable ID"] === treeID)

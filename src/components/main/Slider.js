@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateItem, removeItem, updateNumAnswers } from "../../store/dataSlice";
-import { goToPreviousQuestion, goToNextQuestion } from "../../store/uiSlice";
-import { triggerMathJaxRender } from "../../store/thunk";
+import { onGoToNextQuestion, onGoToPreviousQuestion } from "../../store/thunk.js";
 import Button from "./Button";
 import sliderStyles from './styles/slider.module.css'
 import {ReactComponent as LeftButton} from '../../assets/icons/fi-sr-angle-circle-left.svg'
@@ -13,21 +12,15 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
     const slideIndex = useSelector(state => state.ui.slideIndex);
     const questions = useSelector(state => state.data.quizData);
 
-    const onGoToPreviousQuestion = () => {
-        dispatch(goToPreviousQuestion(questions));
-        setTimeout(() => {
-            dispatch(triggerMathJaxRender());
-        }, 100);
+    const goToPreviousQuestion = () => {
+        dispatch(onGoToPreviousQuestion(questions))
     };
-    const onGoToNextQuestion = () => {
-        dispatch(goToNextQuestion(questions));
-        setTimeout(() => {
-            dispatch(triggerMathJaxRender());
-        }, 100);
+    const goToNextQuestion = () => {
+        dispatch(onGoToNextQuestion(questions))
     };
 
     return <div className={sliderStyles['slider-wrapper']}>
-        <LeftButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={onGoToPreviousQuestion}/>
+        <LeftButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={goToPreviousQuestion}/>
         <div className={sliderStyles['question-answer-wrapper']}>
             <div className={sliderStyles['wrapper']}>
                 <Question 
@@ -45,7 +38,7 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
                     resultsObject={resultsArray[slideIndex]}/>
             </div>
         </div>
-        <RightButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={onGoToNextQuestion}/>
+        <RightButton className={sliderStyles["arrow-svg"]} width={"2rem"} height={"2rem"} onClick={goToNextQuestion}/>
     </div>
 }
 

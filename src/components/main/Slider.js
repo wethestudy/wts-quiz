@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateItem, removeItem, updateNumAnswers } from "../../store/dataSlice";
 import { goToPreviousQuestion, goToNextQuestion } from "../../store/uiSlice";
@@ -13,13 +13,21 @@ const Slider = ({questionArray=[], resultsArray=[]}) => {
     const slideIndex = useSelector(state => state.ui.slideIndex);
     const questions = useSelector(state => state.data.quizData);
 
+    useEffect(()=>{
+        dispatch(triggerMathJaxRender())
+    }, [dispatch])
+
     const onGoToPreviousQuestion = () => {
         dispatch(goToPreviousQuestion(questions));
-        dispatch(triggerMathJaxRender())
+        setTimeout(() => {
+            dispatch(triggerMathJaxRender());
+        }, 100);
     };
     const onGoToNextQuestion = () => {
         dispatch(goToNextQuestion(questions));
-        dispatch(triggerMathJaxRender())
+        setTimeout(() => {
+            dispatch(triggerMathJaxRender());
+        }, 100);
     };
 
     return <div className={sliderStyles['slider-wrapper']}>

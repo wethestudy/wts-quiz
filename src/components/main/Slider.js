@@ -92,7 +92,7 @@ const Answers = ({questionID = null, choices = null, resultsObject = null}) => {
         {choices.map((choice, index)=>{
             return <Button
                     key={index}
-                    text={<MathJax>{choice}</MathJax>}
+                    text={{choice}}
                     onClick={()=>{onSelectAnswer(index)}}
                     type={getButtonType(index)}
                     disabled={resultsObject !== null}

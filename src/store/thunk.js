@@ -25,11 +25,22 @@ export const fetchInitData = () => async (dispatch) => {
   dispatch(setQuestionsAnswers(processedQA))
 }
 
-export const triggerMathJaxRender = () => (dispatch) => {
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
+export const triggerMathJaxRender = debounce(() => {
   if (window.MathJax) {
     window.MathJax.typeset();
   }
-};
+}, 300);
+
 
 export const initTreeObject = (treeID) => (dispatch, getState) => {
   const treeData = getTreePost(getState()).find(object => object.fields["Airtable ID"] === treeID)

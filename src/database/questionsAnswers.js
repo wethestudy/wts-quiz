@@ -3592,7 +3592,7 @@ const questionAnswer = [
       "createdTime": "2024-01-29T09:59:33.000Z",
       "fields": {
         "Question ID": "d316f16f-08fe-4c7f-b7ce-e8cd8b868224",
-        "Question": "What shape does a conic have when eccentricity \\(e\\) approaches infinity?",
+        "Question": "What shape does a conic have when eccentricity \\\\(e\\\\) approaches infinity?",
         "Airtable ID": "recn9dZIBIKhdNycB",
         "Type": "multipleChoice",
         "Choices": "[\"Ellipse\",\"Hyperbola\",\"Parabola\",\"Line\"]",

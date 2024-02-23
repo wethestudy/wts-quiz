@@ -23,18 +23,22 @@ const intervalWebflow100 = setInterval(()=>{
     document.addEventListener('input', function(event) {clearInterval(intervalWebflow100)});
     let treeID = ""
     let memberJSON = {data:{"completedArticlesID": [], "masteredArticlesID": []}};
-    let dispatchEvent = {treeID: treeID, member: memberJSON}
+    let dispatchDetails = {treeID: treeID, member: memberJSON}
     try {
         memDispatchQuiz.getCurrentMember()
             .then(async ({ data: member }) => {
                 if (member) {
                     memberJSON = await memDispatchQuiz.getMemberJSON();
-                    dispatchEvent = {member: memberJSON, treeID: ""}   
+                    dispatchDetails = {member: memberJSON, treeID: ""}   
                 }
-                document.dispatchEvent(new CustomEvent('input', { detail: dispatchEvent}));
+                if (window.location.origin === "https://wethestudy.webflow.io/"){
+                    document.dispatchEvent(new CustomEvent('input', { detail: dispatchDetails}));
+                }
             })
     } catch {
-        document.dispatchEvent(new CustomEvent('input', { detail: dispatchEvent}));
+        if (window.location.origin === "https://wethestudy.webflow.io/"){
+            document.dispatchEvent(new CustomEvent('input', { detail: dispatchDetails}));
+        }
     }
 }, 5000)
 setTimeout(()=>{
@@ -46,6 +50,7 @@ setTimeout(()=>{
 const memReceiveQuiz = window.$memberstackDom;
 window.addEventListener('message', (event) => {
     const modal = document.getElementById('quiz-modal');
+    if(event.origin !== "https://wethestudy.webflow.io") {return}
     if(event.data === "closeModal"){
       modal.style.display = 'none';
     }

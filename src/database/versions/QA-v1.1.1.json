@@ -1,4 +1,4 @@
-const questionAnswer = [
+[
   {
     "id": "rec07wVFwk1kwnAaP",
     "createdTime": "2024-01-29T09:25:20.000Z",
@@ -186,7 +186,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T13:12:47.000Z",
     "fields": {
       "Question ID": "a51dbc74-e186-4ac5-a20a-88f5aa6b3f61",
-      "Question": "What should be the denominator of the \\((x-h)^2\\) term in the standard equation of a horizontal ellipse?",
+      "Question": "What should be the denominator of the \\((x-h)\\) term in the standard equation of a horizontal ellipse?",
       "Airtable ID": "recUlGLyP6pmIkkY6",
       "Type": "multipleChoice",
       "Choices": "[\"\\(a\\)\",\"\\(b\\)\",\"\\(h\\)\"]",
@@ -1252,7 +1252,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T09:44:50.000Z",
     "fields": {
       "Question ID": "0bd8fafc-7117-461d-84fd-a1cb9deade6f",
-      "Question": "How many component Equilibrium equations are there for space equilibrium?",
+      "Question": "How many Equilibrium equations are there for space equilibrium?",
       "Airtable ID": "recJiD3CzMjjFQLNw",
       "Type": "multipleChoice",
       "Choices": "[\"Three\",\"Six\",\"Two\"]",
@@ -1529,7 +1529,7 @@ const questionAnswer = [
       "Airtable ID": "recvo4DhGOuRDWeK6",
       "Type": "multipleChoice",
       "Choices": "[\"In the analysis of deflections\",\"In statically indeterminate structures\",\"All of the above\"]",
-      "Answer": 2,
+      "Answer": 3,
       "Estimated Time": 10
     }
   },
@@ -1654,7 +1654,7 @@ const questionAnswer = [
     "id": "rec97C56spfAOYh8u",
     "createdTime": "2024-02-19T05:52:47.000Z",
     "fields": {
-      "Question ID": "a1d500ec-1ab3-4227-a544-f7213dc7f351",
+      "Question ID": "544891d7-ca38-41e3-95da-c4c4f3031319",
       "Question": "What is the equation to solve for the region between two functions if the differential strip is in the vertical position?",
       "Airtable ID": "recXg3q5obV8OUNPr",
       "Type": "multipleChoice",
@@ -1801,7 +1801,7 @@ const questionAnswer = [
       "Question": "In the stability analysis, what is the first requirement to determine if the structure is externally and internally stable?",
       "Airtable ID": "rectJopYHKsq6uzf9",
       "Type": "multipleChoice",
-      "Choices": "[\"Reaction components must not be collinear, parallel, or concurrent\",\"Equilibrium of the structure\", \"None of the above\"]",
+      "Choices": "[\"Reaction components collinear, parallel, or concurrent\",\"Equilibrium of the structure\", \"None of the above\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -2929,7 +2929,7 @@ const questionAnswer = [
     "createdTime": "2024-01-29T09:12:33.000Z",
     "fields": {
       "Question ID": "275ff337-9f77-403e-ae52-af806151ec56",
-      "Question": "What does \\(U_{s_{\\delta}}\\) represent in the general virtual work equation?",
+      "Question": "What does Usδ represent in the general virtual work equation?",
       "Airtable ID": "recNE73jnGO9LlvTZ",
       "Type": "multipleChoice",
       "Choices": "[\"The product of fictional unit load and actual translation\",\"The product of fictional internal forces and actual internal displacements\",\"The work done by the unit load\",\"The actual displacement of the structure\"]",
@@ -3322,7 +3322,7 @@ const questionAnswer = [
       "Question": "What is the formula for work with constant force?",
       "Airtable ID": "rec6rksCqoIitaY2C",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(W = F \\Delta\\)\", \"\\(W=\\int_{x_1}^{x_2} F(x) \\cdot d x\\)\", \"\\(W= F \\times dx\\)\"]",
+      "Choices": "[\"\\(W = F \\Delta\\)\", \"\\(W=\\int_{x_1}^{x_2} F(x) \\cdot d x\\)\", \"W= F \\times dx\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -3722,7 +3722,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T13:29:02.000Z",
     "fields": {
       "Question ID": "55e228f7-8f51-44e0-a771-1c5a4dd13092",
-      "Question": "What is the second criterion for external stability of 3D frames with internal devices?",
+      "Question": "What is the second criterion for external stability of frames with internal devices?",
       "Airtable ID": "recjI4H7282MXY9EZ",
       "Type": "multipleChoice",
       "Choices": "[\"\\(r + 3m \\geq 3j + e_c\\)\",\"\\(r + 6m \\geq 6j + e_c\\)\",\"\\(r - 3m \\leq 3j - e_c\\)\",\"\\(r - 6m \\leq 6j - e_c\\)\"]",
@@ -3998,7 +3998,7 @@ const questionAnswer = [
       "Question": "What is the domain of the general moment equation?",
       "Airtable ID": "recpHF8Cg89Vuh9a7",
       "Type": "multipleChoice",
-      "Choices": "[\"From \\(x = 0\\) to \\(x = L\\)\",\"From 0 to \\(x\\)\",\"From \\(x = 0\\) to \\(x = 1\\)\"]",
+      "Choices": "[\"From x = 0 to x = L\",\"From 0 to x\",\"From x = 0 to x = 1\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -4024,7 +4024,7 @@ const questionAnswer = [
       "Question": "What is the difference between absolute and relative extrema?",
       "Airtable ID": "rec5Iu355VQqvY04d",
       "Type": "multipleChoice",
-      "Choices": "[\"Absolute extrema are the highest/lowest points for a interval, while relative extrema are the highest/lowest points for all possible values\",\"Absolute extrema are the highest/lowest points for all possible values, while relative extrema are the highest/lowest points for a interval\"]",
+      "Choices": "[\"Absolute extrema are the highest/lowest points for a specific interval, while relative extrema are the highest/lowest points for all possible values of the function\",\"Absolute extrema are the highest/lowest points for all possible values of the function, while relative extrema are the highest/lowest points for a specific interval\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -4141,7 +4141,7 @@ const questionAnswer = [
       "Question": "What is the degree of a homogeneous function?",
       "Airtable ID": "recN1mK5Gf7AbmKBJ",
       "Type": "multipleChoice",
-      "Choices": "[\"The number of variables in the function.\",\"The value of \\(t\\) in the expression \\(t^n \\times f(tx, ty)\\).\",\"The coefficient of \\(t\\) in the expression \\(t^n \\times f(tx, ty)\\).\"]",
+      "Choices": "[\"The number of variables in the function.\",\"The value of \\(t\\) in the expression \\(t^n \\times f(tx, ty)\\).\",\"The exponent of the highest power of a variable in the function.\",\"The coefficient of \\(t\\) in the expression \\(t^n \\times f(tx, ty)\\).\"]",
       "Answer": 2,
       "Estimated Time": 10
     }
@@ -5545,7 +5545,7 @@ const questionAnswer = [
       "Question": "What is the standard equation of a horizontal ellipse with center \\((h, k)\\)?",
       "Airtable ID": "recUlGLyP6pmIkkY6",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\\)\",\"\\(\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\\)\",\"\\(\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 0\\)\"]",
+      "Choices": "[\"\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\",\"\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\",\"\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 0\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -5558,7 +5558,7 @@ const questionAnswer = [
       "Question": "What is the most basic equation to solve for the surface area of a solid using integration?",
       "Airtable ID": "recOsB7NfKvuPlUJe",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(S=\\int_{a}^{b}{dA}\\)\",\"\\(S=2 \\pi \\int_{a}^{b} r(x) \\cdot  dA\\)\",\"None of the above\"]",
+      "Choices": "[\"\\(S=\\int_{a}^{b}{dA}\\)\",\"\\(S=2 \\pi \\int_{a}^{b} r(x) \\cdot  dL\\)\",\"All of the above\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -5662,7 +5662,7 @@ const questionAnswer = [
       "Question": "What is the general virtual work equation?",
       "Airtable ID": "recNE73jnGO9LlvTZ",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(W_{\\delta} + U_{s_{\\Delta}} + U_{s_{\\delta}}\\)\",\"\\(W_{\\delta} + W_{s_{\\Delta}} + W_{s_{\\delta}}\\)\",\"\\(1 \\cdot \\Delta = U_{s_{\\delta}}\\)\",\"\\(1 \\cdot \\Delta = U_{\\Delta}\\)\"]",
+      "Choices": "[\"\\(W_{\\delta} + U_{s_{\\Delta}} + U_{s_{\\delta}}\\)\",\"\\(W_{\\delta} + W_{s_{\\Delta}} + W_{s_{\\delta}}\\)\",\"\\(1 x \\Delta = U_{s_{\\delta}}\\)\",\"\\(1 x \\Delta = U_{\\Delta}\\)\"]",
       "Answer": 2,
       "Estimated Time": 10
     }
@@ -5701,7 +5701,7 @@ const questionAnswer = [
       "Question": "When using the segment equations, how should we evaluate the expression?",
       "Airtable ID": "recvcw1W8UJKVKjuy",
       "Type": "multipleChoice",
-      "Choices": "[\"Substitute \\(x\\) within the defined domain\",\"Consider particular terms\",\"Both\",\"Neither\"]",
+      "Choices": "[\"Substitute x within the defined domain\",\"Consider particular terms\",\"Both\",\"Neither\"]",
       "Answer": 0,
       "Estimated Time": 10
     }
@@ -5792,7 +5792,7 @@ const questionAnswer = [
       "Question": "What is the standard equation of a vertical ellipse with center \\((h, k)\\)?",
       "Airtable ID": "recUlGLyP6pmIkkY6",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\\)\",\"\\(\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\\)\",\"\\(\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 0\\)\"]",
+      "Choices": "[\"\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\",\"\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\",\"\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 0\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -5975,7 +5975,7 @@ const questionAnswer = [
       "Airtable ID": "rec3A2czYMVYOhblZ",
       "Type": "multipleChoice",
       "Choices": "[\"0\",\"1\",\"-1\",\"Undefined\"]",
-      "Answer": 3,
+      "Answer": 2,
       "Estimated Time": 10
     }
   },
@@ -6104,7 +6104,7 @@ const questionAnswer = [
       "Question": "What are the three components of a fixed-end support for a cantilever beam?",
       "Airtable ID": "rec15nZj71Qa6UvVa",
       "Type": "multipleChoice",
-      "Choices": "[\"Shear and moment\",\"Axial force, shear, and bending moment\",\"Horizontal force, vertical force, and reaction moment\",\"None of the above\"]",
+      "Choices": "[\"Shear and moment\",\"axial force, shear, and bending moment\",\"Horizontal force, vertical force, and reaction moment\",\"None of the above\"]",
       "Answer": 2,
       "Estimated Time": 10
     }
@@ -6455,7 +6455,7 @@ const questionAnswer = [
       "Question": "What is the purpose of the explicitly defined terms in the general moment equation?",
       "Airtable ID": "recpHF8Cg89Vuh9a7",
       "Type": "multipleChoice",
-      "Choices": "[\"To include all bending effects of each load\",\"To disregard terms involving the position \\(x\\)\",\"To evaluate the general equation at any point \\(x\\)\"]",
+      "Choices": "[\"To include all bending effects of each load\",\"To disregard terms involving the position x\",\"To evaluate the general equation at any point x\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -6751,7 +6751,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T05:51:15.000Z",
     "fields": {
       "Question ID": "f1288a00-0a21-4a83-aaf3-98dd5730b9d6",
-      "Question": "The expression for the superimposed fictional strain energy due to flexural strains is \\(U_{s_\\delta}=\\int\\frac{Su}{EI}dx\\).",
+      "Question": "The expression for the superimposed fictional strain energy due to flexural strains is \\(U_{s_\\delta}=\\int\\frac{Su}{AE}dx\\).",
       "Airtable ID": "recMh3cbrBUJbbNgL",
       "Type": "multipleChoice",
       "Choices": "[\"True\", \"False\"]",
@@ -7170,7 +7170,7 @@ const questionAnswer = [
       "Question": "Which of the following functions is the correct one if \\(f(2) = 4\\)?",
       "Airtable ID": "recnUvDePj7m9c4Z5",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(f(x)=x^3+x\\)\",\"\\(f(x)=x^2-x\\)\",\"\\(f(x)=2x\\)\"]",
+      "Choices": "[\"\\(f(x)=x^2+x\\)\",\"\\(f(x)=x^2-x\\)\",\"\\(f(x)=2x\\)\"]",
       "Answer": 2,
       "Estimated Time": 15
     }
@@ -7596,7 +7596,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T13:10:47.000Z",
     "fields": {
       "Question ID": "e47de721-1153-4a2b-91a6-538f8dd7b12d",
-      "Question": "What is a possible implication for a beam to have a symmetrical cross-section?",
+      "Question": "What does it mean for a beam to have a symmetrical cross-section?",
       "Airtable ID": "recVluKkdGdtSDwKw",
       "Type": "multipleChoice",
       "Choices": "[\"Its longitudinal axis is a straight plane that passes through the centroid\",\"It has a curved shape\",\"The cross-section changes along its length\"]",
@@ -7664,7 +7664,7 @@ const questionAnswer = [
       "Question": "What is the value of gravitational constant \\(G\\)?",
       "Airtable ID": "rec5Azd2LMy3JNWly",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(6.674×10^{−13}\\) \\(m^3 \\cdot kg^{−1} \\cdot s^{−2}\\)\", \"\\(6.674×10^{−11}\\) \\(m^3 \\cdot kg^{−1} \\cdot s^{−2}\\)\", \"\\(6.674×10^{−12}\\) \\(m^3 \\cdot kg^{−1} \\cdot s^{−2}\\)\"]",
+      "Choices": "[\"\\(6.674×10^{−13}\\) \\(m^3 \\cdot kg^−1 \\cdot s^−2\\)\", \"\\(6.674×10^{−11}\\) \\(m^3 \\cdot kg^−1 \\cdot s^−2\\)\", \"\\(6.674×10^{−12}\\) \\(m^3 \\cdot kg^−1 \\cdot s^−2\\)\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -7999,7 +7999,7 @@ const questionAnswer = [
     "createdTime": "2024-01-29T12:51:39.000Z",
     "fields": {
       "Question ID": "b2f886b3-c556-4cf0-8756-da8db19ac9ac",
-      "Question": "In a pressure-height diagram, what does it represent?",
+      "Question": "In a pressure-height diagram, what does the pressure solid represent?",
       "Airtable ID": "recylTqLMQQJIPFgw",
       "Type": "multipleChoice",
       "Choices": "[\"The total force acting on the object\",\"The varying pressure at different heights\",\"The cross-sectional area of the object\"]",
@@ -8158,7 +8158,7 @@ const questionAnswer = [
       "Question": "In ideal free-fall motion, what is neglected?",
       "Airtable ID": "recEbA029mSizInxp",
       "Type": "multipleChoice",
-      "Choices": "[\"Gravity\",\"Fluid resistance\",\"Force\"]",
+      "Choices": "[\"Gravity\",\"Fluid resistance\",\"Friction\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -8250,8 +8250,7 @@ const questionAnswer = [
       "Airtable ID": "reczOBPN0sO5ROzq6",
       "Type": "multipleChoice",
       "Choices": "[\"True\", \"False\"]",
-      "Answer": 0,
-      "Estimated Time": 10
+      "Answer": 0
     }
   },
   {
@@ -8886,7 +8885,7 @@ const questionAnswer = [
       "Question": "What is a particular solution?",
       "Airtable ID": "recVwQ4rWBnxzAFx8",
       "Type": "multipleChoice",
-      "Choices": "[\"A solution with multiple expressions\",\"A solution with no derivatives\",\"A solution with arbitrary constants\",\"A solution satisfying a specific condition\"]",
+      "Choices": "[\"A solution with multiple expressions\",\"A solution with no derivatives\",\"A solution with arbitrary constants\",\"A solution satisfying a specific conditions\"]",
       "Answer": 3,
       "Estimated Time": 10
     }
@@ -9181,7 +9180,7 @@ const questionAnswer = [
     "id": "recrdjuS4fXrZpDyR",
     "createdTime": "2024-02-19T05:52:48.000Z",
     "fields": {
-      "Question ID": "9da5427f-f123-4564-9ea4-a4580102f5f1",
+      "Question ID": "544891d7-ca38-41e3-95da-c4c4f3031319",
       "Question": "What is \\(dA\\)?",
       "Airtable ID": "recXg3q5obV8OUNPr",
       "Type": "multipleChoice",
@@ -9251,7 +9250,7 @@ const questionAnswer = [
       "Airtable ID": "recCNelNosYyMEANO",
       "Type": "multipleChoice",
       "Choices": "[\"True\", \"False\"]",
-      "Answer": 1,
+      "Answer": 0,
       "Estimated Time": 10
     }
   },
@@ -9341,7 +9340,7 @@ const questionAnswer = [
       "Question": "What does the constant \\(k\\) factor in the fluid resistance equation?",
       "Airtable ID": "recYyELEDzDZAnhGV",
       "Type": "multipleChoice",
-      "Choices": "[\"Mass density of the fluid\",\"Velocity of the object\",\"Shape and size of the body\",\"Drag constant\"]",
+      "Choices": "[\"Mass density of the fluid\",\"Velocity of the object\",\"Shape and size of the body\",\"Drag coefficient\"]",
       "Answer": 2,
       "Estimated Time": 10
     }
@@ -9406,7 +9405,7 @@ const questionAnswer = [
       "Question": "What is terminal velocity?",
       "Airtable ID": "recAC4hpBh0SuCsY4",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(\\frac{mg}{k}\\)\",\"\\(\\sqrt{\\frac{mg}{k}}\\)\",\"\\(mgk\\)\"]",
+      "Choices": "[\"\\(\\frac{mg}{k}\\)\",\"\\(\\sqrt{\\frac{mg}{k}}\\)\",\"\\(mg*k\\)\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -9468,10 +9467,10 @@ const questionAnswer = [
     "createdTime": "2024-01-29T13:09:39.000Z",
     "fields": {
       "Question ID": "0d33c2b2-635a-460c-8e48-2d3e5b17c0d4",
-      "Question": "What is the formula for work with varying force?",
+      "Question": "What is the formula for work with constant force?",
       "Airtable ID": "rec6rksCqoIitaY2C",
       "Type": "multipleChoice",
-      "Choices": "[\"\\(W = F \\Delta\\)\", \"\\(W=\\int_{x_1}^{x_2} F(x) \\cdot d x\\)\", \"\\(W= F \\times dx\\)\"]",
+      "Choices": "[\"\\(W = F \\Delta\\)\", \"\\(W=\\int_{x_1}^{x_2} F(x) \\cdot d x\\)\", \"W= F \\times dx\"]",
       "Answer": 1,
       "Estimated Time": 10
     }
@@ -9598,7 +9597,7 @@ const questionAnswer = [
     "createdTime": "2024-01-29T08:47:29.000Z",
     "fields": {
       "Question ID": "2d0d9128-d891-4c2e-b6e0-e74274e4cad6",
-      "Question": "What does the eccentricity \\(e\\) measure in a hyperbola?",
+      "Question": "What does the eccentricity e measure in a hyperbola?",
       "Airtable ID": "recIPXTkMNohMxZQC",
       "Type": "multipleChoice",
       "Choices": "[\"Pointedness and flatness of the hyperbola\", \"Circularity of the hyperbola\", \"None of the above\"]",
@@ -10001,7 +10000,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T09:44:50.000Z",
     "fields": {
       "Question ID": "5977092c-6c56-44b1-9771-e3fb968b228f",
-      "Question": "How many component Equilibrium equations are there for plane equilibrium?",
+      "Question": "How many Equilibrium equations are there for plane equilibrium?",
       "Airtable ID": "recJiD3CzMjjFQLNw",
       "Type": "multipleChoice",
       "Choices": "[\"Three\",\"Six\",\"Two\"]",
@@ -10108,8 +10107,8 @@ const questionAnswer = [
       "Question": "What is the process of creating composite functions?",
       "Airtable ID": "recu1GZ7Err23mN86",
       "Type": "multipleChoice",
-      "Choices": "[\"Substituting variables and solving for the expression\",\"Identifying the function outputs and substituting them into another function\",\"Combining different types of functions\"]",
-      "Answer": 0,
+      "Choices": "[\"Substituting variables and solving for the expression\",\"Identifying the function inputs and substituting them into another function\",\"Combining different types of functions\"]",
+      "Answer": 1,
       "Estimated Time": 10
     }
   },
@@ -10209,7 +10208,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T13:10:42.000Z",
     "fields": {
       "Question ID": "52a6ef49-945e-4412-ae6d-bee5c06a1f12",
-      "Question": "This method uses a differential shell to obtain the total volume.",
+      "Question": "The shell method is similar to the washer method in such sense that the cross-section of the differential sections are hollow circles.",
       "Airtable ID": "reciBOyzrXyNtazrD",
       "Type": "multipleChoice",
       "Choices": "[\"True\", \"False\"]",
@@ -10222,7 +10221,7 @@ const questionAnswer = [
     "createdTime": "2024-01-30T13:12:47.000Z",
     "fields": {
       "Question ID": "9f96c14d-0592-41d6-b5c4-f9b9d8a499d7",
-      "Question": "What should be the denominator of the \\((y-k)^2\\) term in the standard equation of a vertical ellipse?",
+      "Question": "What should be the denominator of the \\((y-k)\\) term in the standard equation of a vertical ellipse?",
       "Airtable ID": "recUlGLyP6pmIkkY6",
       "Type": "multipleChoice",
       "Choices": "[\"\\(a\\)\",\"\\(b\\)\",\"\\(k\\)\"]",
@@ -10296,5 +10295,3 @@ const questionAnswer = [
     }
   }
 ]
-
-export default questionAnswer

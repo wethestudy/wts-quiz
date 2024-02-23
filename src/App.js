@@ -18,12 +18,16 @@ function App() {
   const handleEventFromWebflow = async (event) => {
     if (event.detail) {
       let webflowDispatch = await event.detail;
-      useDebugging ? dispatch(fetchDebugData()) : dispatch(fetchIntroData(webflowDispatch));
+      dispatch(fetchIntroData(webflowDispatch));
     }
   };
   
   useEffect(()=>{
     dispatch(fetchInitData())
+    if (useDebugging) {
+      dispatch(fetchDebugData()) 
+      return
+    }
     document.addEventListener('input', handleEventFromWebflow);
     return () => {
       document.removeEventListener('input', handleEventFromWebflow);

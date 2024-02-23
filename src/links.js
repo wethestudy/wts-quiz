@@ -7,10 +7,10 @@ const productionURL = "https://wethestudy.com/"
 let url = useDevelopmentURLs ? developmentURL : productionURL
 url = useLocalURL ? localURL : developmentURL
 const links = {
-    resourcesLink: `${url}/resource`,
-    appVersion: `1.0.0`,
-    faqLink: `${url}/resources/faqs`,
-    contact: `${url}/resources/contact`
+    resourcesLink: `${url}resource`,
+    appVersion: `1.0.1`,
+    faqLink: `${url}resources/faqs`,
+    contact: `${url}resources/contact`
 }
 const resourceSlugs = ['guide-to-wethestudy-quizzes', 'reporting-wethestudy-quizzes']
 export {links, url, resourceSlugs}

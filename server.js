@@ -1,11 +1,11 @@
+require('dotenv').config({ path: `${__dirname}/../../.env` });
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-require("dotenv").config();
 
-const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
+const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 const BASE_ID = 'app7qupBwSPEY7HaZ';
 const QUIZ_TABLE = 'tbl8AT5sxaS6nhPvL';
 const QA_TABLE = 'tbl10G10gJIPyUwRo';

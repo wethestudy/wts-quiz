@@ -153,6 +153,17 @@ function DebuggingScreen() {
     dispatch(fetchQuizData(event.target.value, "debug", "debug"));
   }
 
+  const checkNumber = (id) => {
+    let bool = false;
+    for(object of questionsAnswers){
+      if(object.fields["Airtable ID"]==id){
+        bool = true;
+        break;
+      }
+    }
+    return bool
+  }
+
   let generateBoolean = selectedPosts.length === 0
   let manualBoolean = id === "" && object.length === 0
 
@@ -182,8 +193,8 @@ function DebuggingScreen() {
                     className={debuggingScreenStyle["test-button"]} 
                     value={post.fields["Airtable ID"]} 
                     onClick={(event)=>{onTestQuiz(event)}}
-                    disabled={post.fields["Organization: Post Type"] === "Crossroad" ? true : false}
-                  >Test</button>
+                    disabled={!checkNumber(post.fields["Airtable ID"]) ? true : false}
+                  >Local</button>
                 </div>
             })}
           </div>
@@ -199,7 +210,6 @@ function DebuggingScreen() {
     right={
       <div className={debuggingScreenStyle["footer-left"]}>
         <Button text="CHECK DATABASE" onClick={onCheckDatabase}/>
-        <Button text="UPDATE DATABASE" onClick={onUpdateDatabase}/>
       </div>
     }/>
   </>

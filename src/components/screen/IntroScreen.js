@@ -30,13 +30,14 @@ function IntroScreen() {
     const treePostType = useSelector(state => state.tree.treePostType);
     const masteredArticlesID = useSelector(state => state.member.masteredArticlesID);
     const passingRate = useSelector(state => state.quiz.passingRate);
+    const availableQA = useSelector(state => state.database.availableQA);
 
     let [header, setHeader] = useState(null)
     let [body, setBody] = useState(null)
     let [footer, setFooter] = useState(null)
 
     const renderScreen= () => {
-      if(treePostType !== "Crossroad"){
+      if(availableQA !== 0){
         if(!masteredArticlesID.includes(treeID)){
           setHeader(mainHeader)
           setBody(mainBody)

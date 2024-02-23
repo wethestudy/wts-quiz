@@ -5,6 +5,7 @@ const databaseSlice = createSlice({
   initialState: {
     treePost: [],
     questionsAnswers: [],
+    availableQA: 0,
   },
   reducers: {
     setTreePost: (state, action) => {
@@ -12,6 +13,15 @@ const databaseSlice = createSlice({
     },
     setQuestionsAnswers: (state, action) => {
       state.questionsAnswers = action.payload;
+    },
+    setAvailableQA: (state, action) => {
+      let count = 0;
+      state.questionsAnswers.forEach((object) => {
+        if(object.fields["Airtable ID"] === action.payload){
+          count++;
+        }
+      })
+      state.availableQA =  count;
     },
     debugTreePost: (state, action) => {
       state.treePost.map((object)=>{
@@ -27,5 +37,5 @@ const databaseSlice = createSlice({
   },
 });
   
-export const { setTreePost, setQuestionsAnswers, debugTreePost } = databaseSlice.actions;
+export const { setTreePost, setQuestionsAnswers, setAvailableQA, debugTreePost } = databaseSlice.actions;
 export default databaseSlice.reducer;

@@ -1,4 +1,4 @@
-const questionAnswer = [
+[
   {
     "id": "rec07wVFwk1kwnAaP",
     "createdTime": "2024-01-29T09:25:20.000Z",
@@ -10296,5 +10296,3 @@ const questionAnswer = [
     }
   }
 ]
-
-export default questionAnswer

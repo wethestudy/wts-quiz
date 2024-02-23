@@ -1,9 +1,17 @@
-import questionAnswer from "../database/questionsAnswers";
+import questionAnswer from "../database/questionsAnswers";  
 
 function processQA(){
     let processedQA = questionAnswer.map(object=>{
-        object.fields["Choices"] = JSON.parse(object.fields["Choices"])
-        return object
+        try {
+            let parsedArray = JSON.parse(object.fields["Choices"])
+            object.fields["Choices"] = parsedArray
+            return object
+        } catch (error) {
+            let replacedChoices = object.fields["Choices"].replace(/\\/g, "\\\\");
+            let replacedArray = JSON.parse(replacedChoices)
+            object.fields["Choices"] = replacedArray
+            return object
+        }
     })
     return processedQA
 }

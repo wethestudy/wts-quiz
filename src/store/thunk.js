@@ -8,7 +8,7 @@ import { setQuizSettings } from "./quizSlice";
 import { testQuestion, testAnswer } from "../database/testQuestion";
 import { mapQuizTypesFromCode, chooseRandomItemsById, removeAnswersFromObject, responseToResults, processQA } from "./thunkHelper";
 import treePost from "../database/treePost";
-import { setQuestionsAnswers, setTreePost } from "./databaseSlice";
+import { setAvailableQA, setQuestionsAnswers, setTreePost } from "./databaseSlice";
 
 const getResultsData = (state) => state.data.resultsData;
 const getPassingRate = (state) => state.quiz.passingRate;
@@ -87,6 +87,7 @@ export const fetchDebugData = () => async (dispatch) => {
 export const fetchIntroData = (webflowDispatch) => async (dispatch, getState) => {
     try {
       dispatch(setLoading(true));
+      dispatch(setAvailableQA(webflowDispatch.treeID))
       dispatch(setMemberDetails(webflowDispatch.member.data.masteredArticlesID))
       dispatch(initTreeObject(webflowDispatch.treeID))
       dispatch(initQuizSettings(webflowDispatch.treeID))
@@ -107,7 +108,6 @@ async function selectQuestions (processedQA, treeID, postTypes, numQuestions) {
   }
   if(chosenQuestions === "error"){
     //LaTeX check
-    //View and answer each question
     //Update database records using API
     throw new Error('Failure in selecting questions')
   }

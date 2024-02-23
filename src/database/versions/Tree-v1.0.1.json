@@ -1,4 +1,4 @@
-let treePost = [
+[
   {
     "id": "rec046Sb1qntsrg8a",
     "createdTime": "2024-01-18T15:28:45.000Z",
@@ -4080,5 +4080,3 @@ let treePost = [
     }
   }
 ]
-
-export default treePost

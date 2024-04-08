@@ -48,9 +48,14 @@ function IntroScreen() {
           setFooter(mainFooter)
         }
       } else {
-        setHeader(automaticHeader)
-        setBody(automaticBody)
-        setFooter(automaticFooter)
+        setBody(verifyBody)
+        window.parent.postMessage("master", `${url}`);
+        console.log("POST")
+        setTimeout(()=>{
+          setHeader(automaticHeader)
+          setBody(automaticBody)
+          setFooter(automaticFooter)
+        }, 2000)
       }
     }
 
@@ -77,7 +82,6 @@ function IntroScreen() {
     }
 
     const onCloseUpdate = () => {
-      window.parent.postMessage("master", `${url}`);
       dispatch(sendCloseModalMessage())
     }
 
@@ -125,7 +129,7 @@ function IntroScreen() {
         />
       </div>
       <div>
-        <div>Passing this quiz will let you <b>master this node</b>. Click on <b>“Let’s Go!”</b> to start. <br/><b>Do not close on the loading screen! Your records may not register.</b></div>
+        <div>Passing this quiz will let you <b>master this node</b>. Click on <b>“Let’s Go!”</b> to start. <br/><br/><b>NOTE: Do not close on the loading screen or take multiple quizzes at the same time! Your records will not register.</b></div>
       </div>
       <Resources/>
     </div>
@@ -136,11 +140,12 @@ function IntroScreen() {
       <QuizTitle text="This node is:" title={`${treeName}, Ed. ${treeEdition}`}/>
       <div className={introScreenStyles['automatic-body-end-wrapper']}>
         When we update content on this post, you'll have to take a quiz to master it. <br/>
-        Click “OK” to register this node as “Mastered.”
         <Resources/>
       </div>
     </div>
     let automaticFooter = <Footer left={<><Button text={"OK"} onClick={onCloseUpdate}/></>}/>
+
+    let verifyBody = <div>Updating records...</div>
 
     let tutorialHeader = <div>
       <Timer initSeconds={15} disable={true}/>

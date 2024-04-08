@@ -140,6 +140,7 @@ export const evaluateResults = (updatedResultsData) => async (dispatch, getState
   let percentageCorrect = getPercentageCorrect(getState());
   if(percentageCorrect >= passingRate){
     window.parent.postMessage("master", `${url}`);
+    console.log("POST")
   }
 }
 
@@ -153,7 +154,7 @@ export const fetchResultsData = () => async (dispatch, getState) => {
     let updatedResultsData = responseToResults(processedQA, resultsData)
     dispatch(setResultsData(updatedResultsData));
     dispatch(evaluateResults(updatedResultsData))
-    dispatch(setCurrentScreen('results'));
+    setTimeout(()=>{dispatch(setCurrentScreen('results'))}, 5000)
   } catch (error) {
     dispatch(setCurrentScreen('error'));
   } finally {

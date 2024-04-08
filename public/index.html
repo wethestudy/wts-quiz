@@ -17,4 +17,22 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root-quiz"></div>
   </body>
+  <!-- <script>
+    const intervalLocal100 = setInterval(()=>{
+    document.addEventListener('input', function(event) {
+        clearInterval(intervalLocal100)
+    });
+    let treeID = "recZLwB6pRypXoEqn"
+    let memberJSON = {
+      data:{
+        "completedArticlesID": [],
+        "masteredArticlesID": []
+    }};
+    let dispatchEvent = {treeID: treeID, member: memberJSON}
+    document.dispatchEvent(new CustomEvent('input', { detail: dispatchEvent}));
+}, 5000)
+setTimeout(()=>{
+    clearInterval(intervalLocal100)
+}, 20000)
+  </script> -->
 </html>

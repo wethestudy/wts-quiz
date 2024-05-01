@@ -145,7 +145,7 @@ function IntroScreen() {
     </div>
     let automaticFooter = <Footer left={<><Button text={"MASTER NODE"} onClick={onCloseUpdate}/></>}/>
 
-    let verifyBody = <div>Updating records...</div>
+    let verifyBody = <div>Loading...</div>
 
     let tutorialHeader = <div>
       <Timer initSeconds={15} disable={true}/>

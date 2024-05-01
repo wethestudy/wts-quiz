@@ -49,8 +49,6 @@ function IntroScreen() {
         }
       } else {
         setBody(verifyBody)
-        window.parent.postMessage("master", `${url}`);
-        console.log("POST")
         setTimeout(()=>{
           setHeader(automaticHeader)
           setBody(automaticBody)
@@ -82,6 +80,8 @@ function IntroScreen() {
     }
 
     const onCloseUpdate = () => {
+      window.parent.postMessage("master", `${url}`);
+      console.log("POST")
       dispatch(sendCloseModalMessage())
     }
 
@@ -139,11 +139,11 @@ function IntroScreen() {
     let automaticBody = <div className={introScreenStyles['automatic-body-wrapper']}>
       <QuizTitle text="This node is:" title={`${treeName}, Ed. ${treeEdition}`}/>
       <div className={introScreenStyles['automatic-body-end-wrapper']}>
-        When we update content on this post, you'll have to take a quiz to master it. <br/>
+        When we update content on this post, you'll have to take a quiz to master it. Click the button below to register mastery<br/>
         <Resources/>
       </div>
     </div>
-    let automaticFooter = <Footer left={<><Button text={"OK"} onClick={onCloseUpdate}/></>}/>
+    let automaticFooter = <Footer left={<><Button text={"MASTER NODE"} onClick={onCloseUpdate}/></>}/>
 
     let verifyBody = <div>Updating records...</div>
 
